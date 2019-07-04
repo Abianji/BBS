@@ -11,7 +11,7 @@
 |
 */
 
-Route::get('/','PagesController@root')->name('root');
+Route::get('/','PagesController@root')->name('root')->middleware('verified');
 
 // 用户身份验证
 Route::get('login', 'Auth\LoginController@showLoginForm')->name('login');
